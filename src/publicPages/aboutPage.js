@@ -6,14 +6,8 @@ import Contacts from './landingPage/contact-landing.js'
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 const AboutPage = () => {
-    const aboutRef = useRef(null);
-  
-    const handleScrollToAbout = () => {
-      if (aboutRef.current) {
-        aboutRef.current.scrollIntoView({ behavior: 'smooth' });
-      }
-    };
-  
+  const aboutRef = useRef(null);
+
     return (
       <div className="App" style={{ backgroundColor: 'white' }}>
         <TransitionGroup>

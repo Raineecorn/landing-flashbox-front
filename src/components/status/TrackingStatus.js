@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types'; // Import PropTypes for validation
 import ordered from '../../images/statusTrack/ordered.png';
 import inTransit from '../../images/statusTrack/in_transit.png';
 import delivered from '../../images/statusTrack/delivered.png';
@@ -32,7 +33,7 @@ const TrackingStatus = ({ trackingNumber }) => {
   };
 
   return (
-    <div className="container mt-5 pt-5 bg-white rounded ">
+    <div className="container mt-5 pt-5 bg-white rounded">
       {loading ? (
         <div className="d-flex justify-content-center align-items-center" style={{ height: '100vh' }}>
           <div className="spinner-border text-primary" role="status">
@@ -95,6 +96,11 @@ const getImageForStatus = (remarks) => {
     }
   }
   return notFound;  // Default image if no match is found
+};
+
+// Define PropTypes for validation
+TrackingStatus.propTypes = {
+  trackingNumber: PropTypes.string.isRequired,  // Ensure trackingNumber is a string and required
 };
 
 export default TrackingStatus;

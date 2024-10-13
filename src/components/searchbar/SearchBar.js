@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types'; // Import PropTypes for validation
 import 'bootstrap/dist/css/bootstrap.min.css'; // Ensure Bootstrap is imported
 
 const SearchBar = ({ onSearch }) => {
@@ -15,7 +16,7 @@ const SearchBar = ({ onSearch }) => {
     alignItems: 'center',
     width: '100%',
     padding: '10px',
-    boxSizing: 'border-box'
+    boxSizing: 'border-box',
   };
 
   const inputStyle = {
@@ -25,7 +26,7 @@ const SearchBar = ({ onSearch }) => {
     border: '2px solid #ccc',
     borderRadius: '5px 0 0 5px',
     outline: 'none',
-    boxSizing: 'border-box'
+    boxSizing: 'border-box',
   };
 
   const buttonStyle = {
@@ -38,7 +39,7 @@ const SearchBar = ({ onSearch }) => {
     backgroundColor: '#FF3131',
     color: '#fff',
     cursor: 'pointer',
-    boxSizing: 'border-box'
+    boxSizing: 'border-box',
   };
 
   return (
@@ -56,6 +57,11 @@ const SearchBar = ({ onSearch }) => {
       </button>
     </form>
   );
+};
+
+// Define PropTypes
+SearchBar.propTypes = {
+  onSearch: PropTypes.func.isRequired,
 };
 
 export default SearchBar;

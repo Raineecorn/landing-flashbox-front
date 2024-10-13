@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'; // Import PropTypes for validation
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel } from 'react-bootstrap';
 import FlashBox from '../../images/FlashBox-Hero.png';
@@ -65,5 +66,10 @@ function HeroSection({ onScrollToAbout }) {
     </Carousel>
   );
 }
+
+// Define PropTypes for validation
+HeroSection.propTypes = {
+  onScrollToAbout: PropTypes.func.isRequired, // Ensure onScrollToAbout is a function and required
+};
 
 export default HeroSection;

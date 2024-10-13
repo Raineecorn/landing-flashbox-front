@@ -1,17 +1,10 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import ServicesLanding from './landingPage/services-landing.js';
 import TrackingLanding from './landingPage/TrackingLanding.js';
 import Contacts from './landingPage/contact-landing.js'
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 const ServicesPage = () => {
-    const aboutRef = useRef(null);
-  
-    const handleScrollToAbout = () => {
-      if (aboutRef.current) {
-        aboutRef.current.scrollIntoView({ behavior: 'smooth' });
-      }
-    };
   
     return (
       <div className="App">

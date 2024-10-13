@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.7c836368.css",
-    "main.js": "/static/js/main.6a11135a.js",
+    "main.css": "/static/css/main.7cf4d384.css",
+    "main.js": "/static/js/main.128bc3e8.js",
     "static/media/background_main.png": "/static/media/background_main.04e9eb33e6781b6832ae.png",
     "static/media/services-card-2.svg": "/static/media/services-card-2.eb88919798b8b8a45feadc552aef6a61.svg",
     "static/media/services-card-1.svg": "/static/media/services-card-1.8e9e7a302f897aafd3bb259911a07ff8.svg",
@@ -25,11 +25,11 @@
     "static/media/FlashBox-Hero.png": "/static/media/FlashBox-Hero.2c04358239de85b6b68e.png",
     "static/media/nucleo-outline.woff2": "/static/media/nucleo-outline.802141dd0dcc63b21cbb.woff2",
     "index.html": "/index.html",
-    "main.7c836368.css.map": "/static/css/main.7c836368.css.map",
-    "main.6a11135a.js.map": "/static/js/main.6a11135a.js.map"
+    "main.7cf4d384.css.map": "/static/css/main.7cf4d384.css.map",
+    "main.128bc3e8.js.map": "/static/js/main.128bc3e8.js.map"
   },
   "entrypoints": [
-    "static/css/main.7c836368.css",
-    "static/js/main.6a11135a.js"
+    "static/css/main.7cf4d384.css",
+    "static/js/main.128bc3e8.js"
   ]
 }

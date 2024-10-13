@@ -57,7 +57,7 @@ function PrivacyPolicy() {
 
             <h2 className="text-primary mt-4 text-left">6. Cookies</h2>
             <p>
-              Our website uses cookies to enhance your browsing experience. You can disable cookies through your browser settings, although this may affect the website's functionality.
+              Our website uses cookies to enhance your browsing experience. You can disable cookies through your browser settings, although this may affect the website&#39;s functionality.
             </p>
 
             <h2 className="text-primary mt-4 text-left">7. Third-Party Links</h2>

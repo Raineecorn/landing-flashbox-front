@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Form, Container, Row, Col } from 'react-bootstrap';
+import { Button, Form, Row, Col } from 'react-bootstrap';
 import deliveryBoy from '../../components/background/delivery-background.png';
 import ReusableModal from '../components/ReusableModal';  // Adjust the import path if needed
 
@@ -36,7 +36,7 @@ function AboutSection() {
             Flashbox Cargo is your trusted partner in transportation services, dedicated to delivering packages with speed and care. Our mission is to bring joy to our customers by ensuring their packages arrive on time, every time.
           </p>
           <p>
-            We specialize in door-to-door delivery services from Thailand to the Philippines, making international shipping seamless and hassle-free. Whether it's a gift for a loved one or essential business supplies, we've got you covered.
+            We specialize in door-to-door delivery services from Thailand to the Philippines, making international shipping seamless and hassle-free. Whether it&#39;s a gift for a loved one or essential business supplies, we&#39;ve got you covered.
           </p>
           <button
             className="btn btn-primary"
@@ -65,7 +65,7 @@ function AboutSection() {
                 </Col>
                 <Col md={6}>
                   <Form.Group className="mb-3">
-                    <Form.Label>Recipient's Name</Form.Label>
+                    <Form.Label>Recipient&#39;s Name</Form.Label>
                     <Form.Control type="text" name="to_name" required />
                   </Form.Group>
                 </Col>
@@ -89,13 +89,13 @@ function AboutSection() {
                 </Col>
                 <Col md={12}>
                   <Form.Group className="mb-3">
-                    <Form.Label>Sender's Location</Form.Label>
+                    <Form.Label>Sender&#39;s Location</Form.Label>
                     <Form.Control type="text" name="location" required />
                   </Form.Group>
                 </Col>
                 <Col md={12}>
                   <Form.Group className="mb-3">
-                    <Form.Label>Receiver's Location</Form.Label>
+                    <Form.Label>Receiver&#39;s Location</Form.Label>
                     <Form.Control type="text" name="location" required />
                   </Form.Group>
                 </Col>

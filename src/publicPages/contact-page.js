@@ -45,7 +45,7 @@ const ContactUs = () => {
             <div className="text-inside text-center">
               <h2 className="mb-3 text-white">Need a quotation?</h2>
               <p>
-                Need pricing details? Reach out to us for a personalized quotation. We're here to help you get the information you need.
+                Need pricing details? Reach out to us for a personalized quotation. We&#39;re here to help you get the information you need.
               </p>
             </div>
             <div className="button-options d-flex justify-content-center mt-4">
@@ -79,7 +79,7 @@ const ContactUs = () => {
                 </Col>
                 <Col md={6}>
                   <Form.Group className="mb-3">
-                    <Form.Label>Recipient's Name</Form.Label>
+                    <Form.Label>Recipient&#39;s Name</Form.Label>
                     <Form.Control type="text" name="to_name" required />
                   </Form.Group>
                 </Col>
@@ -103,13 +103,13 @@ const ContactUs = () => {
                 </Col>
                 <Col md={12}>
                   <Form.Group className="mb-3">
-                    <Form.Label>Sender'sLocation</Form.Label>
+                    <Form.Label>Sender&#39;s Location</Form.Label>
                     <Form.Control type="text" name="location" required />
                   </Form.Group>
                 </Col>
                 <Col md={12}>
                 <Form.Group className="mb-3">
-                    <Form.Label>Receiver's Location</Form.Label>
+                    <Form.Label>Receiver&#39;s Location</Form.Label>
                     <Form.Control type="text" name="location" required />
                   </Form.Group>
                 </Col>
