@@ -1,0 +1,8 @@
+/* TrackingLanding.css */
+.TrackingLanding {
+  background-image: url('../../images/TrackingPage/FLASHBOX-tracking.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 50vh; 
+}

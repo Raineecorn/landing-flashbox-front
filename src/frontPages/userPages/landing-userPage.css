@@ -1,0 +1,7 @@
+.Login-Page-Container{
+    height: 100vh;
+    background: url('../../components/background/login.bg/login-bg.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,134 @@
+
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #052c4c;
+  padding: 1rem 20rem;
+  position: relative;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo .logo {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.navbar-logo .flashbox-logo {
+  height: 50px;
+}
+
+.navbar-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
+  position: relative;
+}
+
+.navbar-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.navbar-link:hover {
+  text-decoration: underline;
+}
+
+.hamburger {
+  padding-inline-start: 12rem;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Ensure the Login button is aligned to the right on desktop */
+.navbar-item.login {
+  margin-left: auto;
+}
+
+/* Styling the login link as a button */
+.navbar-button {
+  background-color: #f32c12;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-button:hover {
+  background-color: #db290a;
+}
+
+/* Media query for mobile screens */
+@media (max-width: 820px) {
+
+  .navbar-logo {
+    display: flex;
+    align-items:flex-start;
+  }
+
+  
+  .hamburger {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+
+
+  .navbar-list {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #052c4c;
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    gap: 0;
+  }
+
+  .navbar-list.open {
+    display: flex;
+  }
+
+  .navbar-item {
+    width: 20%;
+    text-align: right;
+    padding: 0.5rem
+  }
+
+  .navbar-link, .navbar-button {
+    font-size: 1.5rem;
+    width: 100%;
+  }
+
+  /* Make sure the login button is treated the same as other links on mobile */
+  .navbar-item.login {
+    margin-left: 0.1rem;
+  }
+}

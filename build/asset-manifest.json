@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7c836368.css",
+    "main.js": "/static/js/main.6a11135a.js",
+    "static/media/background_main.png": "/static/media/background_main.04e9eb33e6781b6832ae.png",
+    "static/media/services-card-2.svg": "/static/media/services-card-2.eb88919798b8b8a45feadc552aef6a61.svg",
+    "static/media/services-card-1.svg": "/static/media/services-card-1.8e9e7a302f897aafd3bb259911a07ff8.svg",
+    "static/media/FLASHBOX-tracking.svg": "/static/media/FLASHBOX-tracking.d7ad0ad2e484d286389f.svg",
+    "static/media/hero-background3.png": "/static/media/hero-background3.359b7d53f3b54e974374.png",
+    "static/media/services-card-3.svg": "/static/media/services-card-3.cfb712e225bb5f2bcdb4ff62fec731d4.svg",
+    "static/media/hero-background1.png": "/static/media/hero-background1.0d664d709c1d7e665233.png",
+    "static/media/hero-background2.png": "/static/media/hero-background2.a32593c390ddaf3edebf.png",
+    "static/media/contactFooterBg.png": "/static/media/contactFooterBg.aa6b3b38289d31286ebb.png",
+    "static/media/delivery-background.png": "/static/media/delivery-background.83e21065c8b5b59b8267.png",
+    "static/media/delivered.png": "/static/media/delivered.b221c4f25c7262b0a1f9.png",
+    "static/media/arrivedAt.png": "/static/media/arrivedAt.55cbc489c5f687f930b1.png",
+    "static/media/ordered.png": "/static/media/ordered.62cd9fefebab90c9f706.png",
+    "static/media/in_transit.png": "/static/media/in_transit.d8fd8aac3e00f83ee2ed.png",
+    "static/media/notFound.png": "/static/media/notFound.635e9af095e0547848cb.png",
+    "static/media/FlashBoxLogo.png": "/static/media/FlashBoxLogo.5074f6450594c9b61849.png",
+    "static/media/FlashBox.png": "/static/media/FlashBox.651125d847bf3730cf12.png",
+    "static/media/nucleo-outline.eot": "/static/media/nucleo-outline.56814a6b7240045e1494.eot",
+    "static/media/nucleo-outline.ttf": "/static/media/nucleo-outline.1102ed9b2d16dccdec05.ttf",
+    "static/media/nucleo-outline.woff": "/static/media/nucleo-outline.1a1036e643f97457ec5f.woff",
+    "static/media/FlashBox-Hero.png": "/static/media/FlashBox-Hero.2c04358239de85b6b68e.png",
+    "static/media/nucleo-outline.woff2": "/static/media/nucleo-outline.802141dd0dcc63b21cbb.woff2",
+    "index.html": "/index.html",
+    "main.7c836368.css.map": "/static/css/main.7c836368.css.map",
+    "main.6a11135a.js.map": "/static/js/main.6a11135a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7c836368.css",
+    "static/js/main.6a11135a.js"
+  ]
+}

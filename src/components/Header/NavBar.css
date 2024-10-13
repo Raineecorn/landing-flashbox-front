@@ -1,0 +1,29 @@
+.hero-section {
+  background-image: url('../../components/background/hero-background.svg');
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  color: white;
+}
+
+.hero-logo {
+  max-width: 500px;
+  height: auto;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+}
+
+.btn {
+  width: 150px;
+  font-size: 20px;
+  display: flex;
+  align-items: center; 
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #d32f2f;
+  transform: scale(1.05);
+}

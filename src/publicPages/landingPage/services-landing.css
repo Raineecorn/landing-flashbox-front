@@ -1,0 +1,17 @@
+/* Add custom hover effect to the cards */
+.custom-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.custom-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.custom-card img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.custom-card:hover img {
+  transform: scale(1.01); /* Slight zoom on hover */
+}
