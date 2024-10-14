@@ -14,6 +14,8 @@ import TermsOfService from './components/Footer/Terms.js';
 import ContactUsFooter from './components/Footer/ContactUs-footer.js';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './components/theme/colorTheme.js';
+import LandingUserPage from './frontPages/userPages/loginPage/landing-userPage.js';
+
 
 function App() {
   return (
@@ -22,7 +24,7 @@ function App() {
         <NavBar />
         <div className="App">
           <Routes>
-            <Route path="/" element={<LandingPage />} />
+            <Route path="/" element={< LandingPage />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/tracking" element={<TrackingPage />} />
@@ -30,6 +32,7 @@ function App() {
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/terms" element={<TermsOfService />} />
             <Route path="/contact" element={<ContactUsFooter />} />
+            <Route path="/login" element={< LandingUserPage/> }/>
           </Routes>
           <Footer />
         </div>
