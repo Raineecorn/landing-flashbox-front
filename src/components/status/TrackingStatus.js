@@ -6,6 +6,13 @@ import delivered from '../../images/statusTrack/delivered.png';
 import arrived from '../../images/statusTrack/arrivedAt.png';
 import notFound from '../../images/statusTrack/notFound.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { createClient } from '@supabase/supabase-js';
+
+// Initialize Supabase client
+const supabaseUrl = 'https://crqpfmcvudkvwsvyenkv.supabase.co';
+const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNycXBmbWN2dWRrdndzdnllbmt2Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTcyODg1OTg5NiwiZXhwIjoyMDQ0NDM1ODk2fQ.HQxNGutNq1P9b9eXZxLYHw4LGXjvNe2XI60gMAki4Es';
+const supabase = createClient(supabaseUrl, supabaseAnonKey);
+
 
 const TrackingStatus = ({ trackingNumber }) => {
   const [trackingStatus, setTrackingStatus] = useState([]);
@@ -15,7 +22,24 @@ const TrackingStatus = ({ trackingNumber }) => {
     const fetchTrackingStatus = async () => {
       setLoading(true);
       try {
-        const statuses = getSampleTrackingStatus(trackingNumber);
+        // Fetch tracking data from Supabase based on the tracking_id (trackingNumber)
+        const { data, error } = await supabase
+          .from('trackingfbt_audit') // Your Supabase table name
+          .select('audit_id, tracking_id, date_loaded, remarks') // Select columns from the table
+          .eq('tracking_id', trackingNumber); // Filter by tracking ID (trackingNumber)
+
+          
+        if (error) {
+          throw new Error(error.message);
+        }
+
+        console.log('Fetched Data:', data);
+         
+        const statuses = data.map(item => ({
+          ...item,
+          image: getImageForStatus(item.remarks)
+        }));
+
         setTrackingStatus(statuses);
       } catch (error) {
         console.error('Error fetching tracking status:', error);
@@ -29,7 +53,7 @@ const TrackingStatus = ({ trackingNumber }) => {
   }, [trackingNumber]);
 
   const formatTimestamp = (timestamp) => {
-    return new Date(timestamp).toLocaleString();
+    return new Date(timestamp).toLocaleString(); // Adjust the format to your needs
   };
 
   return (
@@ -46,7 +70,7 @@ const TrackingStatus = ({ trackingNumber }) => {
             trackingStatus.map((status, index) => (
               <div key={index} className="row-md-4 d-flex flex-column align-items-center mb-3">
                 <img src={status.image} alt={status.remarks} className="img-fluid mb-2" style={{ width: '50px', height: '50px' }} />
-                <p className="text-center">{status.remarks} - {formatTimestamp(status.timestamp)}</p>
+                <p className="text-center text-dark">{status.remarks} - {formatTimestamp(status.date_loaded)}</p>
               </div>
             ))
           ) : (
@@ -58,40 +82,23 @@ const TrackingStatus = ({ trackingNumber }) => {
   );
 };
 
-// Sample data function utilizing getImageForStatus
-const getSampleTrackingStatus = (number) => {
-  const data = [
-    { remarks: 'Ordered', timestamp: '2023-08-20T10:00:00Z' },
-    { remarks: 'In Transit', timestamp: '2023-08-21T15:30:00Z' },
-    { remarks: 'Arrived at Facility', timestamp: '2023-08-22T09:00:00Z' },
-    { remarks: 'Out for Delivery', timestamp: '2023-08-23T08:00:00Z' },
-    { remarks: 'Delivered', timestamp: '2023-08-23T13:45:00Z' },
-  ];
-
-  if (number === 'FB24000') {
-    return data.map(item => ({ ...item, image: getImageForStatus(item.remarks) }));
-  }
-  
-  return [{
-    remarks: 'No tracking information available',
-    image: notFound,
-    timestamp: new Date().toISOString(),
-  }];
-};
-
+// Map status remarks to images
 const getImageForStatus = (remarks) => {
   const imageMap = {
-    'ordered': ordered,
-    'in transit': inTransit,
+    'Bangkok Warehouse': ordered,
+    'Loaded': inTransit,
+    'Sailing': inTransit,
+    'Clearance': inTransit,
     'delivered': delivered,
     'arrived': arrived,
+    'Manila Warehouse': arrived, 
     'out for delivery': delivered,
     'not found': notFound,
     'no tracking': notFound,
   };
 
   for (let key in imageMap) {
-    if (remarks.toLowerCase().includes(key)) {
+    if (remarks.toLowerCase().includes(key.toLowerCase())) {
       return imageMap[key];
     }
   }
