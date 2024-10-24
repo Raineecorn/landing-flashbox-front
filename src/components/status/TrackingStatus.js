@@ -33,7 +33,7 @@ const TrackingStatus = ({ trackingNumber }) => {
           throw new Error(error.message);
         }
 
-        console.log('Fetched Data:', data);
+      //  console.log('Fetched Data:', data);
          
         const statuses = data.map(item => ({
           ...item,
@@ -53,8 +53,8 @@ const TrackingStatus = ({ trackingNumber }) => {
   }, [trackingNumber]);
 
   const formatTimestamp = (timestamp) => {
-    return new Date(timestamp).toLocaleString(); // Adjust the format to your needs
-  };
+    return new Date(timestamp).toLocaleDateString(); // This will return just the date, e.g., "9/11/2024"
+  };  
 
   return (
     <div className="container mt-5 pt-5 bg-white rounded">
@@ -66,17 +66,28 @@ const TrackingStatus = ({ trackingNumber }) => {
         </div>
       ) : (
         <div className="row">
-          {trackingStatus.length > 0 ? (
-            trackingStatus.map((status, index) => (
-              <div key={index} className="row-md-4 d-flex flex-column align-items-center mb-3">
-                <img src={status.image} alt={status.remarks} className="img-fluid mb-2" style={{ width: '50px', height: '50px' }} />
-                <p className="text-center text-dark">{status.remarks} - {formatTimestamp(status.date_loaded)}</p>
+        {trackingStatus.length > 0 ? (
+          trackingStatus.map((status, index) => (
+            <div key={index} className="col-md-4 mb-3"> {/* Adjusted column layout */}
+              <div className="d-flex flex-column align-items-center">
+                {/* Image */}
+                <img
+                  src={status.image}
+                  alt={status.remarks}
+                  className="img-fluid mb-2"
+                  style={{ width: '50px', height: '50px' }}
+                />
+                {/* Remarks */}
+                <p className="text-center text-dark">
+                  {status.remarks} - {formatTimestamp(status.date_loaded)}
+                </p>
               </div>
-            ))
-          ) : (
-            <p className="text-center w-100">No tracking information available.</p>
-          )}
-        </div>
+            </div>
+          ))
+        ) : (
+          <p className="text-center w-100">No tracking information available.</p>
+        )}
+      </div>      
       )}
     </div>
   );
