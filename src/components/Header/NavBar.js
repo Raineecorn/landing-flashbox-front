@@ -2,13 +2,19 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import FlashBoxLogo from '../../images/FlashBoxLogo.png';
 import Flashbox from '../../images/FlashBox.png';
+import OptionCards from '../../frontPages/userPages/loginPage/LandingOption';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const NavBar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [showOptionModal, setShowOptionModal] = useState(false);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const toggleOptionModal = () => {
+    setShowOptionModal(!showOptionModal);
   };
 
   return (
@@ -39,12 +45,17 @@ const NavBar = () => {
             <li className="nav-item">
               <Link className="nav-link" to="/services">Services</Link>
             </li>
-            <li className="nav-item ">
-              <Link className="btn btn-danger btn-sm align-items-center" to="/login">Login</Link>
+            <li className="nav-item">
+              <button className="btn btn-danger btn-sm align-items-center" onClick={toggleOptionModal}>
+                Track / Login
+              </button>
             </li>
           </ul>
         </div>
       </div>
+
+      {/* OptionCards Modal */}
+      {showOptionModal && <OptionCards onClose={toggleOptionModal} />}
     </nav>
   );
 };

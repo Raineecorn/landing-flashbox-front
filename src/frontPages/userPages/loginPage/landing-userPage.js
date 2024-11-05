@@ -8,6 +8,7 @@ function landingUserPage() {
             <div className="title-header mt-5 text-white mb-3 text-center">
                 <h1> Track Your Parcel details here </h1>
             </div>
+            
             <div className="login-form-user mb-5">
                 <LoginForm /> 
             </div>

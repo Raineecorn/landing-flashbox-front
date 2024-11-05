@@ -14,7 +14,7 @@ const SearchBar = ({ onSearch }) => {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    width: '100%',
+    width: '75%',
     padding: '10px',
     boxSizing: 'border-box',
   };

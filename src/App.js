@@ -15,6 +15,7 @@ import ContactUsFooter from './components/Footer/ContactUs-footer.js';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './components/theme/colorTheme.js';
 import LandingUserPage from './frontPages/userPages/loginPage/landing-userPage.js';
+import OptionCards from './frontPages/userPages/loginPage/LandingOption.js';
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
             <Route path="/terms" element={<TermsOfService />} />
             <Route path="/contact" element={<ContactUsFooter />} />
             <Route path="/login" element={< LandingUserPage/> }/>
+            <Route path="/login-tracking" element={<OptionCards/>} />
           </Routes>
           <Footer />
         </div>
